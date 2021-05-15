@@ -38,7 +38,7 @@ First clone the repo to the local machine and run the following commands
 
 1. First clone the repo to the local machine and run the following commands
     ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone git@github.com:mmadymarov/finscraper.git
    ```
 2. build the docker compose file with docker-compose
     ```sh
@@ -58,26 +58,33 @@ First clone the repo to the local machine and run the following commands
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-When you finish installion of the project, now instatallion is ready to user.
+When you finish installion of the project, now instatallion is ready to use.
 First tables of the database is empty, we need to populate the tables with the POST
 
-Insert Data – POST  http://localhost:8000/yahoofinance/api/v1.0/insert_history
+Insert Data – **POST**  http://localhost:8000/yahoofinance/api/v1.0/insert_history
 
 Request body:
+            ```json
             {
                 "company_name": "PD",
             }
+            ```
 
-it will return 200 with a proper description message, if data inserted
+it will return code 200 with a proper description message, if data inserted
+
+
 
 If you want to extract already entries you need to GET
 
-Retreive Data – GET http://localhost:8000/yahoofinance/api/v1.0/history/list
+Retreive Data – **GET** http://localhost:8000/yahoofinance/api/v1.0/history/list
+
 
 Request Body:
+            ```json
             {
                 "company_name": "PD",
             }
+            ```
 
 if company history is available in DB. it will return populated entries
 
