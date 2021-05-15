@@ -64,7 +64,7 @@ First tables of the database is empty, we need to populate the tables with the P
 Insert Data – **POST**  http://localhost:8000/yahoofinance/api/v1.0/insert_history
 
 Request body:
-            ```json
+            ```javascript
             {
                 "company_name": "PD",
             }
@@ -80,7 +80,7 @@ Retreive Data – **GET** http://localhost:8000/yahoofinance/api/v1.0/history/li
 
 
 Request Body:
-            ```json
+            ```javascript
             {
                 "company_name": "PD",
             }
